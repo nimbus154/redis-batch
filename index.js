@@ -12,7 +12,7 @@ if (!host || !port || !key) {
 	process.exit(0);
 }
 
-var client = redis.createClient(host, port);
+var client = redis.createClient(port, host);
 
 var tasks = {
 	"select": client.select.bind(client, db),
