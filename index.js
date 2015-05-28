@@ -8,6 +8,11 @@ var db = argv.d || argv.db || 0;
 var key = argv.k || argv.key;
 
 if (!host || !port || !key) {
+	console.log("Usage: node index");
+	console.log("\t -d <number> or --db <number>");
+	console.log("\t -h <string> or --host <string>");
+	console.log("\t -p <number> or --port <number>");
+	console.log("\t -k <string> or --key <string>");
 	console.log("host, port, and key arguments are required");
 	process.exit(0);
 }
